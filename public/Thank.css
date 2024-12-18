@@ -1,0 +1,70 @@
+/* General Styles */
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f2f8fc;
+  background-image: url("—Pngtree—red christmas promotion poster background_1276444.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #333;
+  text-align: center;
+}
+
+.thank-you-container {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 12px;
+  padding: 20px;
+  max-width: 90%;
+  width: 600px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border: 2px solid #d32f2f;
+}
+
+.thank-you-container h1 {
+  font-size: 3em;
+  color: #d32f2f;
+  text-shadow: 2px 2px #ffffff;
+}
+
+.thank-you-container p {
+  font-size: 1.75em;
+  color: #555;
+  margin: 10px 0 20px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #4d5d45;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+@media screen and (max-width: 768px) {
+  .thank-you-container h1 {
+    font-size: 2em;
+  }
+  .thank-you-container p {
+    font-size: 1.4em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .thank-you-container {
+    padding: 5px;
+  }
+  .thank-you-container h1 {
+    font-size: 2em;
+  }
+  .thank-you-container p {
+    font-size: 1.5em;
+  }
+}

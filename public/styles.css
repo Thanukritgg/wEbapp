@@ -1,0 +1,78 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #b43b2b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-style: normal;
+  font-weight: 400;
+  font-family: Berkshire Swash, serif;
+}
+
+.form-container {
+  background-color: #7a231d;
+  padding: 20px 40px;
+  border-radius: 15px;
+  width: 400px;
+  max-width: 90%;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  position: relative;
+  color: white;
+}
+
+.form-container h1 {
+  font-size: 30px;
+  margin-bottom: 5px;
+}
+
+.form-container p {
+  font-size: 17px;
+  margin-bottom: 20px;
+  color: #fcecec;
+}
+
+.name-fields {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.name-fields div {
+  flex: 1;
+}
+
+label {
+  font-size: 15px;
+  color: #fcecec;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+.wish-field {
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #4d5d45;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
