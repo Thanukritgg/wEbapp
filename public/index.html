@@ -14,16 +14,14 @@
             const nameInput = document.getElementById('first-name').value;
             const wishInput = document.getElementById('wish').value;
 
-            const Thai = /^[ก-ฮ]*$/; 
-
-            if ((!Thai.test(nameInput)) && (!Thai.test(wishInput)) ) {
-                return true; 
-            }
-            else {
-                alert("Please type only in English.")
+            const validInput = /^[a-zA-Z0-9\s\S!@#$%^&*()_+={}\[\]:;"'<>,.?/~`-]*$/; 
+            if (validInput.test(nameInput) && validInput.test(wishInput)) {
+                return true;
+            } else {
+                alert("Please type only in English.");
                 return false;
-            }}
-        
+            }
+        }
     </script>
 </head>
 
