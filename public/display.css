@@ -3,7 +3,7 @@ body {
   background-repeat: no-repeat;
   background-image: url("city.png");
   background-size: cover;
-  font-family: Brush Script MT, sans-serif;
+  font-family: Roboto Condensed;
   text-align: center;
   overflow: hidden;
 }
