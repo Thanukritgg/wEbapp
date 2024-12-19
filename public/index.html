@@ -14,14 +14,14 @@
             const nameInput = document.getElementById('first-name').value;
             const wishInput = document.getElementById('wish').value;
 
-            const regex = /^[A-Za-z\s]*$/; 
+            const Thai = /^[ก-ฮ]*$/; 
 
-            if (!regex.test(nameInput)) {
+            if (Thai.test(nameInput) ) {
                 alert("Please enter only English letters in the name field.");
                 return false; 
             }
 
-            if (!regex.test(wishInput)) {
+            if (Thai.test(wishInput)) {
                 alert("Please enter only English letters in the wish field.");
                 return false; 
             }
