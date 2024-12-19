@@ -13,12 +13,12 @@
         function validateForm() {
             const nameInput = document.getElementById('first-name').value;
             const wishInput = document.getElementById('wish').value;
+            const validInput = /^[a-zA-Z0-9\s!@#$%^&*()_+={}\[\]:;"'<>,.?/~`-]*$/;
 
-            const validInput = /^[a-zA-Z0-9\s\S!@#$%^&*()_+={}\[\]:;"'<>,.?/~`-]*$/; 
             if (validInput.test(nameInput) && validInput.test(wishInput)) {
                 return true;
             } else {
-                alert("Please type only in English.");
+                alert("Please type only in English letters, numbers, emojis, and allowed special characters.");
                 return false;
             }
         }
@@ -34,13 +34,13 @@
             <div class="name-fields">
                 <div>
                     <label for="name">Name</label>
-                    <input type="text" id="first-name" name="name" required maxlength="12" 
+                    <input type="text" id="first-name" name="name" required maxlength="12"
                         title="Please type only in English.">
                 </div>
             </div>
             <div class="wish-field">
                 <label for="wish">Your Wish?</label>
-                <textarea id="wish" name="wish" rows="4" required maxlength="40" 
+                <textarea id="wish" name="wish" rows="4" required maxlength="40"
                     title="Please type only in English."></textarea>
             </div>
             <div class="color">
