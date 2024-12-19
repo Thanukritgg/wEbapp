@@ -9,6 +9,7 @@ const presentWidth = 100;
 
 const addpresent = (wish) => {
     const container = document.querySelector('.present-container');
+    
     const present = document.createElement('div');
     present.classList.add('present');
 
@@ -19,10 +20,9 @@ const addpresent = (wish) => {
     textBackground.textContent = `${wish.wish}`;
     present.appendChild(textBackground);
 
-    const name = document.createElement('div');
+    const name = document.createElement('div'); 
     name.classList.add('name');
     name.textContent = `${wish.name}`;
-    present.appendChild(name);
 
     let randomLeft;
     let positionFound = false;
@@ -41,13 +41,23 @@ const addpresent = (wish) => {
         }
     }
 
-    present.style.left = `${randomLeft}px`; 
+    const position = `${randomLeft}px`; 
+    present.style.left = position 
     present.style.top = `-80px`; 
+    present.style.position = 'absolute'; 
 
     container.appendChild(present);
 
+    name.style.position = 'absolute';
+    name.style.left = `${randomLeft + 13}px`; 
+    name.style.top = `-120px`; 
+    name.style.transform = 'translateX(-50%)'; 
+
+    container.appendChild(name); 
+
     present.addEventListener('animationend', async () => {
         present.remove();
+        name.remove();
         existingPositions.splice(existingPositions.indexOf(randomLeft), 1); 
         await deleteWish(wish._id);
     });

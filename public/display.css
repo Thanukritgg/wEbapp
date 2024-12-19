@@ -29,8 +29,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-weight: 900;
+  font-size: 18px;
   text-align: center;
-  animation: floatDown 40s ease-in-out forwards;
+  animation: floatDown 30s ease-in-out forwards;
   overflow: hidden;
 }
 
@@ -83,33 +85,33 @@ body {
 .santa-con {
   position: absolute;
   top: 5%;
-  left: 600px;
+  left: -1200px;
   height: 100%;
   width: 100%;
 }
 
 .santa {
   width: 300px;
-  animation: fly 5s ease-in-out infinite;
+  animation: fly 10s linear infinite;
 }
 
 @keyframes fly {
-  0%,
-  100% {
-    transform: translateY(10px);
+  0% {
+    transform: transformX(-1200px);
   }
-  50% {
-    transform: translateY(30px);
+  100% {
+    transform: translateX(2400px);
   }
 }
 
 .name {
   position: absolute;
-  top: 5px;
-  left: 50%;
-  transform: translateX(-50%);
-  color: white;
-  background: black;
-  font-size: 12px;
-  z-index: 2;
+  color: black;
+  font-size: 16px;
+  z-index: 3;
+  background: rgba(247, 247, 247, 0.8);
+  padding: 5px;
+  border-radius: 5px;
+  text-align: center;
+  animation: floatDown 30s ease-in-out forwards;
 }
