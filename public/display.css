@@ -1,12 +1,11 @@
 body {
-  position: absolute;
+  position: center;
   background-repeat: no-repeat;
   background-image: url("city.png");
   background-size: cover;
   font-family: Brush Script MT, sans-serif;
-  margin: 0;
-  padding: 0;
   text-align: center;
+  overflow: hidden;
 }
 
 .present-container {
