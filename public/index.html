@@ -16,21 +16,14 @@
 
             const Thai = /^[ก-ฮ]*$/; 
 
-            if ((Thai.test(nameInput)) && (Thai.test(wishInput)) ) {
-                alert("Please type only in English.");
-                return false; 
+            if ((!Thai.test(nameInput)) && (!Thai.test(wishInput)) ) {
+                return true; 
             }
-            if  ((!Thai.test(nameInput)) && (Thai.test(wishInput))) {
-                alert("Please type only in English.");
+            else {
+                alert("Please type only in English.")
                 return false;
-            }
-            if ((Thai.test(nameInput)) && (!Thai.test(wishInput))) {
-                alert("Please type only in English.");
-                return false;
-            }
-
-            return true; 
-        }
+            }}
+        
     </script>
 </head>
 
