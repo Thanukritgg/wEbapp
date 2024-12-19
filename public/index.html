@@ -16,14 +16,17 @@
 
             const Thai = /^[ก-ฮ]*$/; 
 
-            if (Thai.test(nameInput) ) {
-                alert("Please enter only English letters in the name field.");
+            if ((Thai.test(nameInput)) && (Thai.test(wishInput)) ) {
+                alert("Please type only in English.");
                 return false; 
             }
-
-            if (Thai.test(wishInput)) {
-                alert("Please enter only English letters in the wish field.");
-                return false; 
+            if  ((!Thai.test(nameInput)) && (Thai.test(wishInput))) {
+                alert("Please type only in English.");
+                return false;
+            }
+            else if ((Thai.test(nameInput)) && (!Thai.test(wishInput))) {
+                alert("Please type only in English.");
+                return false;
             }
 
             return true; 
@@ -33,21 +36,21 @@
 
 <body>
     <div class="form-container">
-        <h1>Christmas Wish</h1>
+        <h1>Make a Wish</h1>
         <br>
         <p>What would you like from Santa this year?</p>
         <form action="/thank" method="POST" onsubmit="return validateForm()">
             <div class="name-fields">
                 <div>
                     <label for="name">Name</label>
-                    <input type="text" id="first-name" name="name" required maxlength="12" pattern="[A-Za-z]+"
-                        title="Please enter only English letters.">
+                    <input type="text" id="first-name" name="name" required maxlength="12" pattern="[ก-ฮ]"
+                        title="Please type only in English.">
                 </div>
             </div>
             <div class="wish-field">
                 <label for="wish">Your Wish?</label>
-                <textarea id="wish" name="wish" rows="4" required maxlength="40" pattern="[A-Za-z\s]+"
-                    title="Please enter only English letters."></textarea>
+                <textarea id="wish" name="wish" rows="4" required maxlength="40" pattern="[ก-ฮ]"
+                    title="Please type only in English."></textarea>
             </div>
             <div class="color">
                 <label for="favcolor">Select your present color:</label>
